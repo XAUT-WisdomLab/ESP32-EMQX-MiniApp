@@ -1,31 +1,26 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/lock.png"></image>
+    <image class="logo" src="/static/MQTT.png"></image>
   </view>
 
   <view>
-    <button class="button-area" @click="buttton_1">开锁</button>
-    <button class="button-area" @click="buttton_2">指纹</button>
-    <button class="button-area" @click="buttton_3">临时密码</button>
+    <button class="button-area" @click="buttton_1">读取设备数据</button>
+    <button class="button-area" @click="buttton_2">控制设备</button>
   </view>
 </template>
 
 <script lang="ts" setup>
 const buttton_1 = () => {
   uni.navigateTo({
-    url: '/pages/unlock/unlock',
+    url: '/pages/data/data',
   })
 }
 const buttton_2 = () => {
   uni.navigateTo({
-    url: '/pages/fingerprint/fingerprint',
+    url: '/pages/control/control',
   })
 }
-const buttton_3 = () => {
-  uni.navigateTo({
-    url: '/pages/password/password',
-  })
-}
+
 // 引入生命周期函数
 import { onMounted } from 'vue'
 
@@ -50,7 +45,7 @@ onMounted(() => {
   height: 300rpx;
   width: 300rpx;
   margin-top: 100rpx;
-  margin-left: 36%;
+  margin-left: 30%;
   margin-right: auto;
   margin-bottom: 50rpx;
 }

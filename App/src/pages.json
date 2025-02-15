@@ -9,42 +9,28 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "门锁控制测试程序",
+				"navigationBarTitleText": "小程序控制设备测试",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path": "pages/info/info",
+			"path": "pages/data/data",
 			"style": {
-				"navigationBarTitleText": "配置",
+				"navigationBarTitleText": "测试读取数据",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path": "pages/unlock/unlock",
+			"path": "pages/control/control",
 			"style": {
-				"navigationBarTitleText": "开锁",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/fingerprint/fingerprint",
-			"style": {
-				"navigationBarTitleText": "指纹",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/password/password",
-			"style": {
-				"navigationBarTitleText": "临时密码",
+				"navigationBarTitleText": "测试控制设备",
 				"enablePullDownRefresh": false
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "门锁控制测试程序",
+		"navigationBarTitleText": "小程序控制设备测试",
 		"navigationBarBackgroundColor": "#ffc670",
 		"backgroundColor": "#F8F8F8"
 	},
