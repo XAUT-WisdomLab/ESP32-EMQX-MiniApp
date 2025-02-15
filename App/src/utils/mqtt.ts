@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 // 连接配置参数：
 const mqttOptions = {
-  host: 'XXXX',
+  host: 'd3fddbc1.ala.cn-hangzhou.emqxsl.cn',
   username: 'APP',
   password: 'APP',
 }
