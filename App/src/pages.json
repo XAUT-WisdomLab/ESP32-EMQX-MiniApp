@@ -1,0 +1,52 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "门锁控制测试程序",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/info/info",
+			"style": {
+				"navigationBarTitleText": "配置",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/unlock/unlock",
+			"style": {
+				"navigationBarTitleText": "开锁",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/fingerprint/fingerprint",
+			"style": {
+				"navigationBarTitleText": "指纹",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/password/password",
+			"style": {
+				"navigationBarTitleText": "临时密码",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "门锁控制测试程序",
+		"navigationBarBackgroundColor": "#ffc670",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
