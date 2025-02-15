@@ -19,19 +19,24 @@
 #include "mqtt_client.h"
 #include "cJSON.h"
 
+
+
 // 要连接的WIFI
-#define ESP_WIFI_STA_SSID ""
-#define ESP_WIFI_STA_PASSWD ""
+#define ESP_WIFI_STA_SSID "duruofu"
+#define ESP_WIFI_STA_PASSWD "3.1415926"
 
 // 连接阿里云的配置信息
-#define MQTT_CLIENT_ID ""
-#define MQTT_USERNAME ""
-#define MQTT_PASSWD ""
-#define MQTT_HOST_URL ""
-#define MQTT_REPORT_TOPIC ""
-#define MQTT_CONTROL_TOPIC ""
+#define MQTT_CLIENT_ID "ESP32"
+#define MQTT_USERNAME "ESP32"
+#define MQTT_PASSWD "ESP32"
+#define MQTT_HOST_URL "mqtts://d3fddbc1.ala.cn-hangzhou.emqxsl.cn:8883"
+#define MQTT_REPORT_TOPIC "/ESP32/attribute"
+#define MQTT_CONTROL_TOPIC "/ESP32/control"
 
 static const char *TAG = "app";
+
+extern const uint8_t emqxsl_ca_crt_start[] asm("_binary_emqxsl_ca_crt_start");
+extern const uint8_t emqxsl_ca_crt_end[] asm("_binary_emqxsl_ca_crt_end");
 
 // 定义传感器数据结构
 struct Data
@@ -238,6 +243,7 @@ static void mqtt_app_start(void)
 {
 	esp_mqtt_client_config_t mqtt_cfg = {
 			.broker.address.uri = MQTT_HOST_URL,
+			.broker.verification.certificate = (const char *)emqxsl_ca_crt_start,
 			.credentials.username = MQTT_USERNAME,
 			.credentials.client_id = MQTT_CLIENT_ID,
 			.credentials.authentication.password = MQTT_PASSWD,
